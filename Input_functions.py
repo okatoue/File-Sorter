@@ -50,23 +50,6 @@ def day_input():
         day_input()
 
 
-def pv_input():
-    print("Would you like separate folders for Photos and Videos? (y/n)")
-    yes_no = input()
-
-    if yes_no.lower() == "y":
-        yn = True
-        return yn
-
-    elif yes_no.lower() == "n":
-        yn = False
-        return yn
-
-    else:
-        print("Please make a valid input (Please enter \"y\" for YES or \"n\" for NO)")
-        pv_input()
-
-
 def month_year_input():
     print("Would you like to have folders show both the month and year? (ex: March 2004) (y/n)")
     yes_no = input()
@@ -81,4 +64,22 @@ def month_year_input():
 
     else:
         print("Please make a valid input (Please enter \"y\" for YES or \"n\" for NO)")
-        pv_input()
+        month_year_input()
+
+
+def folder_remover_input():
+    print("Would you like to remove all sub-folders? This will take the files inside the sub-folders and mix them with"
+          " the files in the main folder (y/n)")
+    yes_no = input()
+
+    if yes_no.lower() == "y":
+        yn = True
+        return yn
+
+    elif yes_no.lower() == "n":
+        yn = False
+        return yn
+
+    else:
+        print("Please make a valid input (Please enter \"y\" for YES or \"n\" for NO)")
+        folder_remover_input()
